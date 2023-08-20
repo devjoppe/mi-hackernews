@@ -1,11 +1,13 @@
+// Chackra UI
+import { IconButton } from '@chakra-ui/react'
+import { SearchIcon } from '@chakra-ui/icons'
+
+
 function App() {
-
   return (
-    
     <div>
-      Appen
+      <IconButton aria-label='Search database' icon={<SearchIcon />} />
     </div>
-
   )
 }
 
