@@ -1,13 +1,16 @@
-// Chackra UI
-import { IconButton } from '@chakra-ui/react'
-import { SearchIcon } from '@chakra-ui/icons'
-
+import { Container } from "@chakra-ui/layout"
+import { Route, Routes } from "react-router"
+import StartPage from "./pages/StartPage"
+import Header from "./components/header/Header"
 
 function App() {
   return (
-    <div>
-      <IconButton aria-label='Search database' icon={<SearchIcon />} />
-    </div>
+    <Container>
+      <Header />
+      <Routes>
+        <Route path="/" element={<StartPage />} />
+      </Routes>
+    </Container>
   )
 }
 
