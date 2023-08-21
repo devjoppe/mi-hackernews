@@ -6,10 +6,10 @@ import Header from "./components/header/Header"
 function App() {
   return (
     <Container>
-      <Header />
-      <Routes>
-        <Route path="/" element={<StartPage />} />
-      </Routes>
+        <Header />
+        <Routes>
+            <Route path="/" element={<StartPage />} />
+        </Routes>
     </Container>
   )
 }
