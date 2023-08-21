@@ -1,5 +1,5 @@
 import { useIsFetching } from "@tanstack/react-query";
-import {Spinner, Box, Flex} from "@chakra-ui/react";
+import {Spinner, Flex} from "@chakra-ui/react";
 
 const isFetchingSpinner = () => {
 
