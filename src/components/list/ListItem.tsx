@@ -1,5 +1,5 @@
 import React from "react"
-import { Card, CardHeader, CardBody, CardFooter, Flex, Box, Heading, Text, IconButton} from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Flex, Heading, Text, IconButton, Link} from '@chakra-ui/react'
 import { BsFillBookmarkStarFill } from "react-icons/bs";
 import { hnItemInt } from "../../interfaces/hnInterfaces.interface"
 
@@ -20,20 +20,22 @@ const isoToFormattedString = (isoDate: string) => {
 const ListItem:React.FC<IProp> = ({itemData}) => {
     return(
         <Card mb="6">
-            <CardHeader>
-                <Flex alignItems="center">
-                    <Box flex='1'>
-                        <Heading size='md'>{itemData.title}</Heading>
-                    </Box>
+            <CardHeader pb="0">
+                <Flex flexDirection="row">
+                    <Flex flex="1" alignItems="center">
+                        <Link href={itemData.url} isExternal ml="2">
+                            <Heading size='md'>{itemData.title}</Heading>
+                        </Link>
+                    </Flex>
                     <IconButton
                         variant='ghost'
                         colorScheme='gray'
-                        aria-label='See menu'
+                        aria-label='Add Favorite'
                         icon={<BsFillBookmarkStarFill />}
                     />
                 </Flex>
             </CardHeader>
-            <CardBody>
+            <CardBody pb="0">
                 <Text fontSize='md'>{itemData.points} points by {itemData.author} with {itemData.num_comments} comments</Text>
             </CardBody>
             <CardFooter>

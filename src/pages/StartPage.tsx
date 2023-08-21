@@ -3,7 +3,6 @@ import { getStartStories } from '../services/hnAPI'
 import ListLayout from '../components/list/ListLayout'
 import {TabList, Tabs, Tab, TabPanels, TabPanel} from "@chakra-ui/react";
 
-
 const StartPage = () => {
 
     const startStories = useQuery({
@@ -17,7 +16,7 @@ const StartPage = () => {
             <Tabs variant="soft-rounded">
                 <TabList>
                     <Tab>Recent</Tab>
-                    <Tab>Favorites</Tab>
+                    <Tab>My Favorites</Tab>
                 </TabList>
                 <TabPanels>
                     <TabPanel>
