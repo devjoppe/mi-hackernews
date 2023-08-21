@@ -11,7 +11,7 @@ const StartPage = () => {
 
     console.log("Start stories: ", startStories.data?.hits)
 
-    //Todo: Need the global loading icon!
+    //Todo: Need the global fethingspinner icon!
 
     return ( 
         <div>
