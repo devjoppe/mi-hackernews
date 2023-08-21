@@ -23,7 +23,7 @@ const ListItem:React.FC<IProp> = ({itemData}) => {
             <CardHeader pb="0">
                 <Flex flexDirection="row">
                     <Flex flex="1" alignItems="center">
-                        <Link href={itemData.url} isExternal ml="2">
+                        <Link href={itemData.url} isExternal>
                             <Heading size='md'>{itemData.title}</Heading>
                         </Link>
                     </Flex>
